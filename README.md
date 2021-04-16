@@ -1,4 +1,15 @@
-# gravity
-Plugin that allows to simulate the graviter of the moon as well as are oxygen
+# Gravity
+- what is gravity?
+Gravity is an early development plugin designed to mimic gravity as well as any other factor on the moon.
+The factors present in the plugin for the moment : 
+- gravity
+- oxygen
 
-- présentation : https://youtu.be/gxEh3ZR7N2Y
+
+# présentation
+- Youtube : https://youtu.be/gxEh3ZR7N2Y
+
+
+# contact 
+- Email: elysiomartinspro@gmail.com
+- Discord: Refaltor#1000
