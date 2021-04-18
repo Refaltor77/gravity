@@ -24,7 +24,6 @@ class playerListener implements Listener
     public function onJoin(PlayerJoinEvent $event)
     {
         $player = $event->getPlayer();
-        $path = gravity::getInstance()->getDataFolder();
         $oxygene = gravity::getInstance()->getConfig()->get("oxygene");
         self::$oxygene[$player->getName()] = $oxygene;
         $time = gravity::getInstance()->getConfig()->get("O²_time_use") * 20;
