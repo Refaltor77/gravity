@@ -18,16 +18,15 @@ use pocketmine\utils\Config;
 
 class playerListener implements Listener
 {
+    public static $oxygene = [];
     private static $cooldown = [];
 
     public function onJoin(PlayerJoinEvent $event)
     {
         $player = $event->getPlayer();
         $path = gravity::getInstance()->getDataFolder();
-        $data = new Config($path . "players/" . $player->getName() . ".yml", 2);
         $oxygene = gravity::getInstance()->getConfig()->get("oxygene");
-        $data->set($player->getName(), $oxygene);
-        $data->save();
+        self::$oxygene[$player->getName()] = $oxygene;
         $time = gravity::getInstance()->getConfig()->get("O²_time_use") * 20;
         gravity::getInstance()->getScheduler()->scheduleRepeatingTask(new gravityTask($player->getName()), $time);
     }
@@ -45,10 +44,7 @@ class playerListener implements Listener
                 $player->getLevel()->broadcastLevelEvent($player, LevelEventPacket::EVENT_SOUND_ORB);
                 $quantity = gravity::getInstance()->getConfig()->get("oxygene_add");
                 $player->sendTip("§4[§c!§4]§e Oxygene §6§l»§r§a + $quantity");
-                $path = gravity::getInstance()->getDataFolder();
-                $data = new Config($path . "players/" . $player->getName() . ".yml", 2);
-                $data->set($player->getName(), $data->get($player->getName()) + $quantity);
-                $data->save();
+                self::$oxygene[$player->getName()] = self::$oxygene[$player->getName()] + $quantity;
             }elseif (time() < self::$cooldown[$player->getName()]){
             }else unset(self::$cooldown[$player->getName()]);
         }
@@ -57,11 +53,8 @@ class playerListener implements Listener
     public function onRespawn(PlayerRespawnEvent $event)
     {
         $player = $event->getPlayer();
-        $path = gravity::getInstance()->getDataFolder();
-        $data = new Config($path . "players/" . $player->getName() . ".yml", 2);
         $oxygene = gravity::getInstance()->getConfig()->get("oxygene_add");
-        $data->set($player->getName(), $oxygene);
-        $data->save();
+        self::$oxygene[$player->getName()] = $oxygene;
     }
 
 
