@@ -66,7 +66,7 @@ class playerListener implements Listener
 	public function worldUI(Player $player){
     	$name = $player->getName();
     	$config = gravity::getInstance()->getConfig();
-    	$form = new SimpleForm(function (Player $player, $data = null) use ($name, $config) {
+    	$form = new SimpleForm(function (Player $player, $data = null) {
     		if (is_null($data)) return;
     		switch ($data){
 				case 0:
