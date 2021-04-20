@@ -19,7 +19,7 @@ The factors present in the plugin for the moment :
 ## 4.0.0 soon...
 - added configuration of all messages
 - code clean
-- possibilité de pouvoir setup des zone, avec une commande /pos1 /pos2 /zone create <name>
+- possibility to set up zones, with a command /pos1 /pos2 /zone create <name>
 
 ### contact 
 - Email: elysiomartinspro@gmail.com
