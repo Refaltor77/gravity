@@ -12,7 +12,7 @@ The factors present in the plugin for the moment :
 ## 3.0.0
 
 - adding a rocket, when you click on it, it opens a menu to teleport us to another world (which you will configure in config.yml)
-- adding commands /launch <spawn:remove> to spawn or remove a rocket (permission: "gravity.spawn.launch")
+- adding commands /launch (spawn:remove) to spawn or remove a rocket (permission: "gravity.spawn.launch")
 <img src="img/rocket.png" width="350" title="rocket">
 <img src="img/menu.png" width="350" title="rocket menu">
 
