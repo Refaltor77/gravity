@@ -1,0 +1,28 @@
+---
+# not to touch /!\
+version: "3.0.0"
+
+O²_time_use: 1 # secondes
+oxygen: 40 # 20 seconds of oxygene because the consumption time of one liter of oxygene is set to one second :)
+oxygen_item: "388:0"
+oxygen_add: 30
+
+
+# the armor configure for this plugin, allows to survive in a world configure for a lunar environment
+astronaute_armor:
+  helmet: 314
+  chestplate: 315
+  leggings: 316
+  boots: 317
+
+
+# Teleport configuration when typing a rocket
+world_teleport:
+  x: 0
+  y: 80
+  z: 0
+  world: "world"
+
+world:
+  - "world"
+...
