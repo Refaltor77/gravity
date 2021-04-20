@@ -41,7 +41,6 @@ class gravityTask extends Task
 					$inv->getLeggings()->getId() !== gravity::getInstance()->getConfig()->get("astronaute_armor")["leggings"] ||
 					$inv->getBoots()->getId() !== gravity::getInstance()->getConfig()->get("astronaute_armor")["boots"]) {
 					$player->addEffect(new EffectInstance(Effect::getEffect(Effect::BLINDNESS), 40, 1, false));
-					$embed = new 
 					$player->sendPopup("§4[§c!§4]§e Oxygen §6§l»§r§4 alert equipment not equipped ");
 					$player->setHealth($player->getHealth() - 1);
 					$player->broadcastEntityEvent(ActorEventPacket::HURT_ANIMATION);
