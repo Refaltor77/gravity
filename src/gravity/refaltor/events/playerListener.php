@@ -55,8 +55,10 @@ class playerListener implements Listener
     	if (!$launch instanceof Player){
     		if ($launch->getNameTag() === "§eRocket"){
 				$event->setCancelled(true);
-				if (!isset(launch::$remove[$damager->getName()])){
-					if ($damager instanceof Player) self::worldUI($damager);
+				if ($damager instanceof Player){
+					if (!isset(launch::$remove[$damager->getName()])){
+						if ($damager instanceof Player) self::worldUI($damager);
+					}
 				}
 			}
 		}
