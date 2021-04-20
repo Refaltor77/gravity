@@ -138,20 +138,6 @@ class newHuman extends Human{
 	}
 
 
-	public function close() : void{
-		if(!$this->closed){
-			if($this->inventory !== null){
-				$this->inventory->removeAllViewers(true);
-				$this->inventory = null;
-			}
-			if($this->enderChestInventory !== null){
-				$this->enderChestInventory->removeAllViewers(true);
-				$this->enderChestInventory = null;
-			}
-			parent::close();
-		}
-	}
-
 	/**
 	 * Wrapper around {@link Entity#getDataFlag} for player-specific data flag reading.
 	 *
